@@ -1,164 +1,77 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Michael Marrazzo – Projects</title>
-  <meta name="description" content="Showcasing Michael Marrazzo's latest web projects, interactive demos, and open-source work.">
-  <meta property="og:title" content="Michael Marrazzo – Projects">
-  <meta property="og:description" content="A curated collection of web apps, designs, and tools by Michael Marrazzo.">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <!-- AOS Animate on Scroll -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
+  <title>Project Showcase</title>
   <style>
-    :root {
-      --bg: #0D1117;
-      --text: #C9D1D9;
-      --accent: #58A6FF;
-      --card-bg: #161B22;
-      --radius: 12px;
-      --transition: 0.3s ease;
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      text-align: center;
     }
-    [data-theme="light"] {
-      --bg: #F6F8FA;
-      --text: #24292F;
-      --accent: #0969DA;
-      --card-bg: #FFFFFF;
+    header {
+      margin-bottom: 2rem;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); transition: background var(--transition), color var(--transition); }
-    header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: var(--card-bg); position: sticky; top: 0; z-index: 10; }
-    header h1 { font-size: 1.75rem; font-weight: 800; }
-    #theme-toggle { background: none; border: none; font-size: 1.25rem; cursor: pointer; color: var(--accent); transition: transform var(--transition); }
-    #theme-toggle:hover { transform: scale(1.1); }
-
-    .hero { text-align: center; padding: 4rem 2rem; }
-    .hero h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2; }
-    .hero p { font-size: 1.125rem; color: var(--accent); }
-
-    .filters { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.5rem; padding: 1rem 2rem; }
-    .filters input { padding: 0.75rem 1rem; border-radius: var(--radius); border: 1px solid var(--text); width: 100%; max-width: 400px; background: var(--card-bg); color: var(--text); }
-    .tags { display: flex; gap: 0.5rem; overflow-x: auto; }
-    .tag { padding: 0.5rem 0.75rem; border-radius: var(--radius); border: 1px solid var(--accent); cursor: pointer; font-weight: 600; transition: background var(--transition), color var(--transition); }
-    .tag.active, .tag:hover { background: var(--accent); color: var(--bg); }
-
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; padding: 2rem; }
-    .card { background: var(--card-bg); border-radius: var(--radius); padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 6px rgba(0,0,0,0.2); transition: transform var(--transition), box-shadow var(--transition); }
-    .card:hover { transform: translateY(-5px); box-shadow: 0 8px 12px rgba(0,0,0,0.3); }
-    .card h3 { font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--accent); }
-    .card p { flex: 1; font-size: 0.95rem; color: var(--text); }
-    .card a { margin-top: 1rem; text-decoration: none; font-weight: 600; color: var(--bg); background: var(--accent); padding: 0.5rem 1rem; border-radius: var(--radius); text-align: center; transition: background var(--transition); }
-    .card a:hover { background: darken(var(--accent), 10%); }
-
-    #to-top { position: fixed; bottom: 2rem; right: 2rem; background: var(--accent); color: var(--bg); border: none; padding: 0.75rem; border-radius: 50%; font-size: 1.25rem; cursor: pointer; display: none; box-shadow: 0 2px 4px rgba(0,0,0,0.3); }
-
-    footer { text-align: center; padding: 2rem; font-size: 0.875rem; color: var(--text); }
-
-    /* Animation utilities */
-    [data-aos] { opacity: 0; transition-property: opacity, transform; }
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+    .project {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .project h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      color: #007acc;
+    }
+    .project p {
+      margin: 1rem 0;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+    .project a {
+      display: inline-block;
+      margin-top: 1rem;
+      text-decoration: none;
+      color: #fff;
+      background-color: #007acc;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+    }
+    .project a:hover {
+      background-color: #005fa3;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.875rem;
+      color: #777;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Michael Marrazzo</h1>
-    <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
+    <h1>My Portfolio</h1>
   </header>
 
-  <section class="hero" data-aos="fade-down">
-    <h2>Hello, I’m Michael.<br> I build things for the web.</h2>
-    <p>Explore my projects below ↓</p>
+  <section class="project">
+    <h2>Example Project</h2>
+    <p>This is a brief description of the example project. It highlights the main features and objectives in a concise way.</p>
+    <a href="https://www.google.com" target="_blank" rel="noopener">View Project</a>
   </section>
 
-  <section class="filters" data-aos="fade-up">
-    <div class="tags" id="tags"></div>
-    <input type="search" id="search" placeholder="Search projects…" aria-label="Search projects">
-  </section>
-
-  <section class="grid" id="projects-list">
-    <!-- cards get injected here -->
-  </section>
-
-  <button id="to-top" aria-label="Back to top">↑</button>
-
-  <footer>&copy; <span id="year"></span> Michael Marrazzo.</footer>
-
-  <!-- Dependencies -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <footer>&copy; <span id="year"></span> Michael Marrazzo</footer>
 
   <script>
-    // Data (replace or fetch externally)
-    const projects = [
-      { title: 'Interactive Data Viz', desc: 'A D3.js-based dashboard with live data streams.', url: '#', tags: ['D3', 'JS'] },
-      { title: 'CSS Art Gallery', desc: 'Pure CSS illustrations and animations.', url: '#', tags: ['CSS', 'Animations'] },
-      { title: 'API Explorer', desc: 'Explore REST APIs with live code examples.', url: '#', tags: ['React', 'API'] },
-      { title: 'Game Prototype', desc: 'A browser game built with Phaser.js.', url: '#', tags: ['Phaser', 'Game'] }
-    ];
-
-    // Inject year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Theme toggle
-    const htmlEl = document.documentElement;
-    const toggle = document.getElementById('theme-toggle');
-    const saved = localStorage.getItem('theme');
-    if (saved) htmlEl.setAttribute('data-theme', saved);
-    toggle.addEventListener('click', () => {
-      const next = htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      htmlEl.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-    });
-
-    // Render tags
-    const tagsContainer = document.getElementById('tags');
-    const allTags = [...new Set(projects.flatMap(p => p.tags))];
-    allTags.forEach(tag => {
-      const btn = document.createElement('button');
-      btn.className = 'tag';
-      btn.textContent = tag;
-      btn.addEventListener('click', () => { btn.classList.toggle('active'); applyFilter(); });
-      tagsContainer.appendChild(btn);
-    });
-
-    // Render projects
-    function applyFilter() {
-      const term = document.getElementById('search').value.toLowerCase();
-      const active = [...document.querySelectorAll('.tag.active')].map(b => b.textContent);
-      const container = document.getElementById('projects-list');
-      container.innerHTML = '';
-
-      projects
-        .filter(p => p.title.toLowerCase().includes(term) && (active.length === 0 || active.every(t => p.tags.includes(t))))
-        .forEach(p => {
-          const card = document.createElement('div');
-          card.className = 'card';
-          card.setAttribute('data-aos', 'zoom-in');
-          card.innerHTML = `
-            <h3>${p.title}</h3>
-            <p>${p.desc}</p>
-            <a href="${p.url}" target="_blank" rel="noopener">View Project →</a>
-          `;
-          container.appendChild(card);
-        });
-      AOS.refresh();
-    }
-    document.getElementById('search').addEventListener('input', applyFilter);
-    applyFilter();
-
-    // AOS init
-    AOS.init({ duration: 600, once: true });
-
-    // Scroll to top
-    const toTop = document.getElementById('to-top');
-    window.addEventListener('scroll', () => toTop.style.display = window.scrollY > 400 ? 'block' : 'none');
-    toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   </script>
 </body>
 </html>
-
